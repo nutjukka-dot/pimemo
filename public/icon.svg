@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F4F0" />
+      <stop offset="100%" stop-color="#E2E1DC" />
+    </linearGradient>
+    <linearGradient id="piGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C9A8E" />
+      <stop offset="100%" stop-color="#4F6D61" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCD7EC" />
+      <stop offset="100%" stop-color="#584B79" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.12" />
+      <feDropShadow dx="-4" dy="-4" stdDeviation="8" flood-color="#ffffff" flood-opacity="0.9" />
+    </filter>
+  </defs>
+
+  <!-- Background Tactile Squircle -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bgGrad)" filter="url(#softShadow)" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- Inner Soft Inset Ring -->
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#D8D6CE" stroke-width="6" stroke-dasharray="8 8" opacity="0.6" />
+
+  <!-- Accent Geometry (Subtle Golden Circle or Arc) -->
+  <path d="M 170 256 A 86 86 0 0 1 342 256" fill="none" stroke="#DCD7EC" stroke-width="12" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Pi Symbol (π) Vector -->
+  <g fill="url(#piGrad)" filter="drop-shadow(0 4px 6px rgba(45, 58, 52, 0.2))">
+    <!-- Top Bar -->
+    <path d="M 140 180 C 140 168 152 158 170 158 L 342 158 C 358 158 372 166 372 178 C 372 188 360 196 346 196 L 166 196 C 150 196 140 188 140 180 Z" />
+    <!-- Left Leg -->
+    <path d="M 190 190 L 190 326 C 190 342 182 354 164 354 C 152 354 144 346 144 338 C 144 334 148 328 156 326 C 166 324 168 316 168 304 L 168 190 Z" />
+    <!-- Right Leg -->
+    <path d="M 302 190 L 302 314 C 302 334 312 348 334 348 C 348 348 358 340 364 332 C 368 326 362 318 354 322 C 344 328 336 324 334 310 L 334 190 Z" />
+  </g>
+
+  <!-- Decimal Dots (3.14...) -->
+  <circle cx="204" cy="390" r="10" fill="#584B79" opacity="0.85" />
+  <circle cx="240" cy="390" r="7" fill="#7C9A8E" opacity="0.7" />
+  <circle cx="272" cy="390" r="7" fill="#7C9A8E" opacity="0.7" />
+  <circle cx="304" cy="390" r="7" fill="#7C9A8E" opacity="0.7" />
+</svg>

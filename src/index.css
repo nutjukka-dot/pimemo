@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-sage-base: #7C9A8E;
+    --color-sage-dark: #2D3A34;
+    --color-sage-light: #E2ECE7;
+    --color-lavender-soft: #DCD7EC;
+    --color-lavender-dark: #584B79;
+    --color-canvas: #E8E7E3;
+    --color-surface-card: #F5F4F0;
+    --color-surface-highlight: #FFFFFF;
+    --color-text-primary: #1C221F;
+    --color-text-muted: #5E6762;
+    --color-success: #2E7D32;
+    --color-error: #D9534F;
+    --color-warning: #E67E22;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .font-mono-pi {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Tactile Soft-UI Shadows & Surfaces */
+.tactile-raised {
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.85),
+    4px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.tactile-inset {
+  background: #E2E1DC;
+  box-shadow: 
+    inset 3px 3px 6px 0px rgba(0, 0, 0, 0.08),
+    inset -3px -3px 6px 0px rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.tactile-inset-focus {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tactile-inset-focus:focus-within {
+  box-shadow: 
+    inset 3px 3px 6px 0px rgba(0, 0, 0, 0.09),
+    inset -3px -3px 6px 0px rgba(255, 255, 255, 0.95),
+    0 0 0 2px #C2B8D9;
+}
+
+.tactile-btn {
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: 
+    -2px -2px 6px 0px rgba(255, 255, 255, 0.90),
+    3px 3px 8px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.tactile-btn:hover {
+  background: linear-gradient(145deg, #FFFFFF, #F1F0EB);
+  transform: translateY(-1px);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.95),
+    4px 5px 12px 0px rgba(0, 0, 0, 0.10);
+}
+.tactile-btn:active {
+  box-shadow: 
+    inset 2px 2px 4px 0px rgba(0, 0, 0, 0.12),
+    inset -2px -2px 4px 0px rgba(255, 255, 255, 0.70);
+  transform: translateY(1px);
+}
+
+.tactile-btn-primary {
+  background: linear-gradient(145deg, #8BA99D, #6F8D81);
+  color: #FFFFFF;
+  box-shadow: 
+    -2px -2px 6px 0px rgba(255, 255, 255, 0.65),
+    3px 3px 9px 0px rgba(45, 58, 52, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.tactile-btn-primary:hover {
+  background: linear-gradient(145deg, #96B4A8, #769588);
+  transform: translateY(-1px);
+  box-shadow: 
+    -3px -3px 8px 0px rgba(255, 255, 255, 0.75),
+    4px 5px 14px 0px rgba(45, 58, 52, 0.28);
+}
+.tactile-btn-primary:active {
+  box-shadow: 
+    inset 2px 2px 4px 0px rgba(20, 30, 25, 0.25),
+    inset -2px -2px 4px 0px rgba(255, 255, 255, 0.35);
+  transform: translateY(1px);
+}
+
+.tactile-btn-lavender {
+  background: linear-gradient(145deg, #E6E2F2, #CEC7E4);
+  color: #584B79;
+  box-shadow: 
+    -2px -2px 6px 0px rgba(255, 255, 255, 0.85),
+    3px 3px 8px 0px rgba(88, 75, 121, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tactile-btn-lavender:hover {
+  background: linear-gradient(145deg, #EDE9F7, #D6D0EB);
+  transform: translateY(-1px);
+}
+.tactile-btn-lavender:active {
+  box-shadow: 
+    inset 2px 2px 4px 0px rgba(88, 75, 121, 0.18),
+    inset -2px -2px 4px 0px rgba(255, 255, 255, 0.7);
+  transform: translateY(1px);
+}
+
+/* Numpad Key Specific */
+.tactile-key {
+  min-height: 54px;
+  background: linear-gradient(145deg, #FFFFFF, #EBEAE5);
+  box-shadow: 
+    -2px -2px 5px 0px rgba(255, 255, 255, 0.90),
+    3px 3px 7px 0px rgba(0, 0, 0, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #1C221F;
+  border-radius: 14px;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.tactile-key:active, .tactile-key-active {
+  box-shadow: 
+    inset 2px 2px 4px 0px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 4px 0px rgba(255, 255, 255, 0.80);
+  transform: translateY(1.5px);
+  background: #E2E1DC;
+}
+
+/* Pulse animation for metronome */
+@keyframes metronome-beat {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.animate-metronome {
+  animation: metronome-beat 0.25s ease-out;
+}
